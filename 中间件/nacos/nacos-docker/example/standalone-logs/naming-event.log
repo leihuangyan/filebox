@@ -1,0 +1,4 @@
+2020-07-25 17:58:07,982 INFO DEFAULT_GROUP@@insist-service-emp6001 {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.31.99:6001:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-07-25 17:58:08,000 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@insist-service-emp6001, ips: 192.168.31.99:6001_true,
+

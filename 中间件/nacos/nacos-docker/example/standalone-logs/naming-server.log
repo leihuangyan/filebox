@@ -1,0 +1,14 @@
+2020-07-25 17:58:00,820 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2020-07-25 17:58:00,828 INFO listen for service meta change
+
+2020-07-25 17:58:07,797 WARN [CLIENT-BEAT] The instance has been removed for health mechanism, perform data compensation operations, beat: {"load":0.0,"cpu":0.0,"rt":0.0,"qps":0.0,"mem":0.0,"port":6001,"ip":"192.168.31.99","serviceName":"DEFAULT_GROUP@@insist-service-emp6001","cluster":"DEFAULT","weight":1.0,"ephemeral":true,"metadata":{"preserved.register.source":"SPRING_CLOUD"}}, serviceName: DEFAULT_GROUP@@insist-service-emp6001
+
+2020-07-25 17:58:07,809 INFO creating empty service public:DEFAULT_GROUP@@insist-service-emp6001
+
+2020-07-25 17:58:07,945 INFO [NEW-SERVICE] {"name":"DEFAULT_GROUP@@insist-service-emp6001","protectThreshold":0.0,"groupName":"DEFAULT_GROUP","metadata":{},"finalizeCount":0,"owners":[],"resetWeight":false,"enabled":true,"selector":{"type":"none"},"namespaceId":"public","ipDeleteTimeout":30000,"lastModifiedMillis":1595671087819,"checksum":"01c08baab57e91bceb05109d53df73c4","clusterMap":{},"empty":true}
+
+2020-07-25 17:58:07,955 WARN cluster: DEFAULT not found, ip: {"ip":"192.168.31.99","port":6001,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@insist-service-emp6001","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1595671087809,"marked":false,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}, will create new cluster with default configuration.
+
+2020-07-25 17:58:07,980 INFO [NACOS-RAFT] datum is changed, key: com.alibaba.nacos.naming.iplist.ephemeral.public##DEFAULT_GROUP@@insist-service-emp6001, value: {"instanceList":[{"instanceId":"192.168.31.99#6001#DEFAULT#DEFAULT_GROUP@@insist-service-emp6001","ip":"192.168.31.99","port":6001,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@insist-service-emp6001","metadata":{"preserved.register.source":"SPRING_CLOUD"},"lastBeat":1595671087809,"marked":false,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]}
+
