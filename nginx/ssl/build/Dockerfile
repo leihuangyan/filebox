@@ -1,8 +1,5 @@
 FROM  nginx:stable-perl
 
-
-ARG PORT=80
-
 LABEL maintainer="lhy"
 
 RUN mkdir -p  /web \
@@ -33,7 +30,7 @@ ADD ./4601011_lhy.pp.ua.pem  /ssl
 ADD ./fileauth/.well-known/pki-validation/fileauth.txt  /fileauth/.well-known/pki-validation
 ADD ./default.conf  /etc/nginx/conf.d/
 
-EXPOSE ${PORT}
+EXPOSE 80
 EXPOSE 443
 
 CMD ["nginx", "-g", "daemon off;"]
