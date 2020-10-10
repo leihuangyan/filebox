@@ -1,0 +1,11 @@
+version: "2"
+services:
+  nacos:
+    image: registry.cn-hangzhou.aliyuncs.com/leihuangyan/nginx:lhy-ssl-web
+    restart: always
+    container_name: nginx-ssl-web
+    ports:
+      - "80:80"
+      - "443:443"
+
+
