@@ -1,0 +1,25 @@
+version: '3'
+services:
+ mysql-dev:
+#   restart: always
+   image: mysql:8.0.17
+   container_name: mysql-dev
+   ports:
+    - 3306:3306
+   environment:
+     TZ: Asiz:Shanghai
+     MYSQL_ROOT_PASSWORD: 1223
+   command: [
+      "--log-bin=mysql-bin",
+      "--character-set-server=utf8mb4",
+      "--collation-server=utf8mb4_unicode_ci",
+      "--innodb_flush_log_at_trx_commit=1",
+      "--sync_binlog=1"
+      ]
+   volumes:
+     - /Users/lhy/Downloads/scp/docker/mysql/lib:/var/lib/mysql
+     - /Users/lhy/Downloads/scp/docker/mysq/conf:/etc/mysql/conf.d
+
+volumes:
+  mysql-data:
+  mysql-conf:

@@ -1,0 +1,10 @@
+version: "2"
+services:
+  nacos:
+    image: registry.cn-hangzhou.aliyuncs.com/leihuangyan/seata:diy-1.3
+    restart: always
+    container_name: seata-diy-1.3
+    ports:
+      - "8091:8091"
+    environment:
+      - SEATA_IP=10.226.145.241

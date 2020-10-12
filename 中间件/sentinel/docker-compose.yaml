@@ -1,0 +1,10 @@
+version: "2"
+services:
+  nacos:
+    image: registry.cn-hangzhou.aliyuncs.com/leihuangyan/sentinel:1.7.2
+    container_name: sentineli
+    restart: always
+    ports:
+      - "8080:8080"
+
+

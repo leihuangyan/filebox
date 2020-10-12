@@ -1,0 +1,51 @@
+version: "3"
+services:
+  zk1:
+  #  restart: always
+    image: zookeeper
+    container_name: zk1
+    hostname: zk1
+    environment:
+      TZ: 'Asia/Shanghai'
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=zk1:2888:3888;2181 server.2=zk2:2888:3888;2181 server.3=zk3:2888:3888;2181
+    ports:
+      - 2181:2181
+    volumes:
+      - zk1-data:/opt/data
+      - zk1-log:/opt/log
+  zk2:
+ #   restart: always
+    image: zookeeper
+    container_name: zk2
+    hostname: zk2
+    environment:
+      TZ: Asia/Shanghai
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=zk1:2888:3888;2181 server.2=zk2:2888:3888;2181 server.3=zk3:2888:3888;2181
+    ports:
+      - 2182:2181
+    volumes:
+      - zk2-data:/opt/data
+      - zk2-log:/opt/log
+  zk3:
+#    restart: always
+    image: zookeeper
+    container_name: zk3
+    hostname: zk3
+    environment:
+      TZ: Asia/Shanghai
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=zk1:2888:3888;2181 server.2=zk2:2888:3888;2181 server.3=zk3:2888:3888;2181
+    ports:
+      - 2183:2181
+    volumes:
+      - zk3-data:/opt/data
+      - zk3-log:/opt/log
+volumes:
+  zk1-data:
+  zk1-log:
+  zk2-data:
+  zk2-log:
+  zk3-data:
+  zk3-log:
